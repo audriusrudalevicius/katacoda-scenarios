@@ -23,14 +23,15 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "foreground.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
-    "uilayout": "editor-terminal-split"
+    "uilayout": "uilayout-terminal-with-vscode"
   },
   "backend": {
     "imageid": "minikube-running"
