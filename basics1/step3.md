@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: localhost:5000/example_counter
+        image: localhost:5000/tot/example_counter
       imagePullSecrets:
       - name: regcred
 </pre>
@@ -27,12 +27,9 @@ spec:
 
 kind: Deployment
 
-Kubernetes resource defines deployment.
-* Defines deployment stategy
-* Defines pod template
-* Manages ReplicaSets
+Kubernetes resource defines deployment that will create ReplicaSets resources for this spec.template.
 
-**Under the hood**
+**Under the hood of resources**
 
 Kubernetes has key/value database and event stream internally and after you will create/update/delete resource it will:
 
