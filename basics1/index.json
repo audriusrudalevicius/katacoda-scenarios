@@ -40,14 +40,14 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "foreground.sh"
+      "background": "background.sh"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
       "host01": [
-        { "file": "config.json", "target": "/root/.docker/" },
+        { "file": "config.json", "target": "/root/" },
         { "file": "Dockerfile", "target": "/root/tot" },
         { "file": "script.sh", "target": "/root/tot" }
       ]
@@ -55,6 +55,7 @@
   },
   "environment": {
     "uilayout": "vscode-terminal-split",
+    "hidesidebar": true,
     "uieditorpath": "/root/tot"
   },
   "backend": {
