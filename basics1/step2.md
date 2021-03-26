@@ -1,21 +1,21 @@
 # Build docker image
 
-Will build docker image and tag as `example_counter`
+## Build image
 
-```
-docker build -t example_counter .
-```
+This will build docker image and tag as *example_counter*
 
-Docker run
+`docker build -t example_counter .`{{execute}}
 
-```
-docker run -it --rm example_counter
-```
+Docker run to test it works
 
-```
-docker tag example_counter localhost:5000/example_counter
-```
+`docker run -it --rm example_counter`{{execute}}
 
-```
-docker push 'localhost:5000/example_counter'
-```
+Ctrl+c to kill and exit
+
+## Deploy to docker registry
+
+Will tag and publish image to local registry so kubernetes cluster can access it later
+
+`docker tag example_counter localhost:5000/example_counter`{{execute}}
+
+`docker push 'localhost:5000/example_counter'`{{execute}}

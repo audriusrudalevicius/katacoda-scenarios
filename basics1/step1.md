@@ -1,13 +1,7 @@
 # Create docker file
+Lets create long running docker job
 
-Create and go to image dir
-
-```
-mkdir app
-cd app
-```
-
-`Dockerfile`
+Dockerfile
 
 ```
 FROM bash:5.0
@@ -16,7 +10,8 @@ RUN chmod +x ./script.sh
 CMD ["bash", "./script.sh"]
 ```
 
-`script.sh`
+
+script.sh
 
 ```
 touch counter.txt

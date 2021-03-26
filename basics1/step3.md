@@ -1,6 +1,6 @@
 # Create deployment
 
-`deployment.yaml`
+deployment.yaml
 
 ```
 apiVersion: apps/v1
@@ -22,18 +22,7 @@ spec:
         image: localhost:5000/example_counter
 ```
 
-```
-kubectl create -f deployment.yaml
-```
+`kubectl create -f deployment.yaml`{{execute}}
 
-```
-kubectl get deployment
-```
-
-```
-kubectl describe deployment app1
-```
-
-```
-kubectl get po
-```
+Get deployment, replicaSet, pod
+`kubectl get deploy,rs,po -l app=app1`{{execute}}
