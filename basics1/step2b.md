@@ -6,6 +6,7 @@ This enables you, colegue or kubernetes cluster able to download builded docker 
 First we need tag it with repository url and namespace to container
 `docker tag example_counter localhost:5000/tot/example_counter`{{execute}}
 
+Then push image to registry
 `docker push 'localhost:5000/tot/example_counter'`{{execute}}
 
 Docker registry is repository for build docker images
