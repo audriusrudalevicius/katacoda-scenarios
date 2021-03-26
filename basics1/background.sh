@@ -1,6 +1,3 @@
-set -euo pipefail
-IFS=$'\n\t'
-
 mkdir /root/tot || true
 cd /root/tot
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
