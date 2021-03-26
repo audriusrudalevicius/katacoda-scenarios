@@ -28,13 +28,13 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        { "file": "Dockerfile", "target": "/root/tot" },
+        { "file": "script.sh", "target": "/root/tot" }
+      ]
     }
-  },
-  "assets": {
-    "host01": [
-      { "file": "Dockerfile", "target": "/root/tot" },
-      { "file": "script.sh", "target": "/root/tot" }
-    ]
   },
   "environment": {
     "uilayout": "editor-terminal",
