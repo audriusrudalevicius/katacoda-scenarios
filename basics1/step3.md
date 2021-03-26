@@ -18,21 +18,11 @@ spec:
       containers:
       - name: app1
         image: localhost:5000/example_counter
+      imagePullSecrets:
+      - name: regcred
 </pre>
 
-`kubectl create -f deployment.yaml`{{execute}}
 
-Get deployment, replicaSet, pod
-`kubectl get deploy,rs,po -l app=app1`{{execute}}
+kind: Deployment
 
-Describe
-`kubectl  describe rs -l app=app1`{{execute}}
-
-Will see
-
-```
-Pods Status:    0 Running / 1 Waiting / 0 Succeeded / 0 Failed
-```
-
-Pods is waiting for something, let's check the situation
-
+Kubernetes resource defines deployment that will create ReplicaSet resource for this spec.template

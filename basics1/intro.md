@@ -1,4 +1,4 @@
-# Application Deployment using Kubernetes
+# Application deployment using Kubernetes
 
 ## Basic core concepts to begin with
 
