@@ -14,11 +14,15 @@ Describe deploy (deployment) to see more information about its deployment state
 
 **What is Deployment**
 
-Defines pod template
+Kubernetes resource thet defines deployment
+* Defines deployment stategy
+* Defines pod template
+* Manages ReplicaSets
 
 **Waht is ReplicaSet**
 
-Manages replicated instances of pods
+Kubernetes resource thet defines replication
+* Manages replicated instances of pods
 
 **What is Pod**
 
