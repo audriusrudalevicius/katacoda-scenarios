@@ -9,4 +9,4 @@ kubectl create secret generic regcred \
     --from-file=.dockerconfigjson=/root/config.json \
     --type=kubernetes.io/dockerconfigjson
 
-echo 'done' > /opt/katacoda-background-finished
+#echo 'done' > /opt/katacoda-background-finished
