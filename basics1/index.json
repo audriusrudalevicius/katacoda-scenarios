@@ -47,6 +47,7 @@
     },
     "assets": {
       "host01": [
+        { "file": "config.json", "target": "/root/.docker/" },
         { "file": "Dockerfile", "target": "/root/tot" },
         { "file": "script.sh", "target": "/root/tot" }
       ]
