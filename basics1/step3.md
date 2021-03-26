@@ -1,8 +1,6 @@
 # Create deployment
 
-deployment.yaml
-
-```
+<pre class="file" data-filename="deployment.yaml" data-target="replace">
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,9 +18,12 @@ spec:
       containers:
       - name: app1
         image: localhost:5000/example_counter
-```
+</pre>
 
 `kubectl create -f deployment.yaml`{{execute}}
 
 Get deployment, replicaSet, pod
 `kubectl get deploy,rs,po -l app=app1`{{execute}}
+
+Describe
+`kubectl describe rs <name>`
