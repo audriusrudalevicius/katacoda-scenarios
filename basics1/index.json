@@ -31,7 +31,8 @@
     }
   },
   "environment": {
-    "uilayout": "uilayout-terminal-with-vscode"
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/tot"
   },
   "backend": {
     "imageid": "minikube-running"

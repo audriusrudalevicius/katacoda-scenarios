@@ -2,7 +2,7 @@
 
 ```
 kubectl create secret generic regcred \
-    --from-file=.dockerconfigjson=./.docker/config.json \
+    --from-file=.dockerconfigjson=/root/.docker/config.json \
     --type=kubernetes.io/dockerconfigjson
 ```
 
