@@ -26,4 +26,13 @@ Get deployment, replicaSet, pod
 `kubectl get deploy,rs,po -l app=app1`{{execute}}
 
 Describe
-`kubectl describe rs <name>`
+`kubectl  describe rs -l app=app1`{{execute}}
+
+Will see
+
+```
+Pods Status:    0 Running / 1 Waiting / 0 Succeeded / 0 Failed
+```
+
+Pods is waiting for something, let's check the situation
+

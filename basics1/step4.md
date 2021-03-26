@@ -1,42 +1,8 @@
-# Setup secret for access docker registry
+# Debug pod status
 
-## Create secret resource from file
+`kubectl describe po -l app=app1`
 
-```
-kubectl create secret generic regcred \
-    --from-file=.dockerconfigjson=/root/.docker/config.json \
-    --type=kubernetes.io/dockerconfigjson
-```{{execute}}
+In events section you will see errors
 
-## Set secret to deployment and update it
-
-Update `deployment.yaml`
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: app1
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: app1
-  template:
-    metadata:
-      labels:
-        app: app1
-    spec:
-      containers:
-      - name: app1
-        image: localhost:5000/example_counter
-      imagePullSecrets:
-      - name: regcred
-```
-
-Update deployment
-
-`kubectl apply -f deployment.yaml`{{execute}}
-
-Preview results
-`kubectl get deploy,rs,po -l app=app1`{{execute}}
+Like in this case
+ Warning  Failed            32s (x21 over 5m39s)   kubelet, node01    Error: ImagePullBackOff
