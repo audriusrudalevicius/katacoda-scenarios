@@ -30,7 +30,9 @@ kind: Deployment
 
 Kubernetes resource defines deployment that will create ReplicaSets resources for this spec.template.
 
-**Strategy** Defines how to deal with old pods. 
+**Selector** ReplicaSet will add its OwnerReference to them and add to count of running pods
+
+**Strategy** Defines how to deal with old pods
 
 * Recreate - Kill old, start new.
 * RollingUpdate - Kill defined % of old pods, start new, checks its ready status, continues
