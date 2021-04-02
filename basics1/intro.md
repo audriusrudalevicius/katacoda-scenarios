@@ -15,11 +15,11 @@ Workload type resources:
 * Deployment
 * Replicaset
 * Pod
-* Job
-
-Configuration:
+<!-- * Job -->
+<!--  -->
+<!-- Configuration:
 * Configset
-* Secrets
+* Secrets -->
 
 Storage:
 * Volumes
