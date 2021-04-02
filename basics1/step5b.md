@@ -104,7 +104,7 @@ Check if new pod is running and old is terminated
 
 Now our numbers are stored in persitent disk. As in this demo our peristend disk is dir on host, we can prove it stores data by finding that dir.
 
-`kubectl get pv -l`{{execute}}
+`kubectl get pv`{{execute}}
 
 Find the name of pv and then
 
@@ -114,23 +114,11 @@ You will see someting like:
 
 ```
 spec:
-  accessModes:
-  - ReadWriteOnce
-  capacity:
-    storage: 50Mi
-  claimRef:
-    apiVersion: v1
-    kind: PersistentVolumeClaim
-    name: demo-pv1-claim
-    namespace: default
-    resourceVersion: "474"
-    uid: cb12ed91-dc7b-41f2-a5e2-0f01e81879ae
   hostPath:
     path: /tmp/hostpath-provisioner/pvc-cb12ed91-dc7b-41f2-a5e2-0f01e81879ae
-    type: ""
 ```
 
-hostPath.path is path to dir
+hostPath.path is path to local dir
 
 Same can be done with single comand:
 `ls $(kubectl get pv jsonpath='{.items[*].spec.hostPath.path}')`{{execute}}
