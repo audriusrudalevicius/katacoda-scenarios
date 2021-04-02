@@ -17,7 +17,7 @@ Ctrl+c to kill or `clear`{{execute interrupt}}
 [Important guidlines of docker file](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 * Keep images small
 * Understand build context
-* Create ephemeral containers (like processes)
+* Create [ephemeral](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#create-ephemeral-containers) containers (like processes)
 
 [12 Factor Applications mainfesto](https://12factor.net/)
 * Execute the app as one or more stateless (share-nothing) processes
