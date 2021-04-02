@@ -12,6 +12,8 @@ spec:
   selector:
     matchLabels:
       app: app1
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
@@ -24,12 +26,18 @@ spec:
       - name: regcred
 </pre>
 
-
 kind: Deployment
 
 Kubernetes resource defines deployment that will create ReplicaSets resources for this spec.template.
 
-**Under the hood of resources**
+**Strategy** Defines how to deal with old pods. 
+
+* Recreate - Kill old, start new.
+* RollingUpdate - Kill defined % of old pods, start new, checks its ready status, continues
+
+**Template** Defines a pod
+
+<!-- **Under the hood of resources**
 
 Kubernetes has key/value database and event stream internally and after you will create/update/delete resource it will:
 
@@ -39,4 +47,4 @@ Kubernetes has key/value database and event stream internally and after you will
 
 Intrnaly there is *controller* that monitors internal events like created, modified, deleted etc. for interested resources like this one and will prcess them usually also altering its meta information to reflect its state.
 
-In kubernetes you can create your own resources and controllers for them
+In kubernetes you can create your own resources and controllers for them. -->

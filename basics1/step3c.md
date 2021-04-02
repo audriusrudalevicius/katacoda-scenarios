@@ -5,25 +5,26 @@ Get deployment, replicaSet, pod of our deployed app1
 
 You should see 3 kinds of resources being created from one yaml file that describes only deployment kind. Moust important for us is deployment as it basically manages all of them.
 
-
 Describe deploy (deployment) to see more information about its deployment state
 `kubectl describe deploy -l app=app1`{{execute}}
 
-
-<hr>
-
-**What is Deployment**
+## What is Deployment
 
 Kubernetes resource thet defines deployment
-* Defines deployment stategy
+
+* Defines deployment stategy (Manages pod migrations between old and new replicasets)
 * Defines pod template
 * Manages ReplicaSets
 
-**Waht is ReplicaSet**
+## What is ReplicaSet
 
 Kubernetes resource thet defines replication
-* Manages replicated instances of pods
 
-**What is Pod**
+* Creates or deletes pods to match desired number of running pods
+* Defines ownership reference
+* Defines pod template
+* Accuires pods by its selector, eg pod is stated externaly but replicaset will count it ar running instnace
+
+## What is Pod
 
 Manages set of runnining containers

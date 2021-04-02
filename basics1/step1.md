@@ -1,7 +1,13 @@
-# Create docker file
+# Create containers using Docker
+
 Lets create long running docker job that each second will write increasing number to file simulating data generation
 
-Dockerfile defines frozzen, stateless environment where our application will run. It defines OS, packages/libraries file system structure
+
+Dockerfile defines frozzen, stateless environment where our application will run. 
+Here you define OS, packages/libraries, drivers, file system structure. 
+
+**Note:** Each time you run new contaner instance it will run from its initial state, no files/configuration changes will be persisted in container file system.
+
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">
 FROM bash:5.0

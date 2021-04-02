@@ -12,17 +12,15 @@ Docker run to test it works
 
 Ctrl+c to kill or `clear`{{execute interrupt}}
 
-
-**Reads for best practices**
+## Reads for best practices
 
 [Important guidlines of docker file](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 * Keep images small
 * Understand build context
-* Leverage build cache
-* Create ephemeral containers
+* Create ephemeral containers (like processes)
 
 [12 Factor Applications mainfesto](https://12factor.net/)
-* Execute the app as one or more stateless processes
+* Execute the app as one or more stateless (share-nothing) processes
 * Store config in the environment
 * Scale out via the process model
 * Keep development, staging, and production as similar as possible
