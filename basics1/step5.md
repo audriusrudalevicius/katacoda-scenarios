@@ -28,10 +28,10 @@ Usual flow:
 
 3. You start pod with volume linked to **PersistentVolumeClaim**
 
-**PersistentVolume** can have following access modes:
+<!-- **PersistentVolume** can have following access modes:
 
 * ReadWriteOnce: The volume can be mounted as read-write by a single node.
 * ReadOnlyMany: The volume can be mounted read-only by many nodes.
-* ReadWriteMany: The volume can be mounted as read-write by many nodes. (ususally NFS/S3/GCS only)
+* ReadWriteMany: The volume can be mounted as read-write by many nodes. (ususally NFS/S3/GCS only) -->
 
 PV to PVC is one to one bound

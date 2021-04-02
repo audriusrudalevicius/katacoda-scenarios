@@ -1,6 +1,4 @@
-# How to add volume to pod
-
-## PersistentVolume and PersistentVolumeClaim Creation
+# Volume to pod
 
 ## PersistentVolume
 
@@ -106,7 +104,7 @@ Check if new pod is running and old is terminated
 
 Now our numbers are stored in persitent disk. As in this demo our peristend disk is dir on host, we can prove it stores data by finding that dir.
 
-`kubectl get pv -l app=app1`{{execute}}
+`kubectl get pv -l`{{execute}}
 
 Find the name of pv and then
 
@@ -135,7 +133,7 @@ spec:
 hostPath.path is path to dir
 
 Same can be done with single comand:
-`ls $(kubectl get pv -l app=app1 jsonpath='{.items[*].spec.hostPath.path}')`{{execute}}
+`ls $(kubectl get pv jsonpath='{.items[*].spec.hostPath.path}')`{{execute}}
 
 Also we can inspect running pod, and make sure it has our volume attaced:
 
