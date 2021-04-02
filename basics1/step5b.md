@@ -101,7 +101,7 @@ spec:
 
 `kubectl apply -f deployment.yaml`{{execute}}
 
-Check new deployed pod version
+Check if new pod is running and old is terminated
 `kubectl get po -l app=app1`{{execute}}
 
 Now our numbers are stored in persitent disk. As in this demo our peristend disk is dir on host, we can prove it stores data by finding that dir.
@@ -110,7 +110,7 @@ Now our numbers are stored in persitent disk. As in this demo our peristend disk
 
 Find the name of pv and then
 
-`kubectl get pv/NAME OF PV -o yaml`
+`kubectl get pv/PV_NAME -o yaml`
 
 You will see someting like:
 
@@ -136,3 +136,7 @@ hostPath.path is path to dir
 
 Same can be done with single comand:
 `ls $(kubectl get pv -l app=app1 jsonpath='{.items[*].spec.hostPath.path}')`{{execute}}
+
+Also we can inspect running pod, and make sure it has our volume attaced:
+
+`kubectl get po -l app=app1 -o yaml`{{execute}}
